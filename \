@@ -1,0 +1,28 @@
+defmodule Shit do
+
+def parse(arg) do
+  :parsed
+end
+
+
+  def sum(a, b) do
+    do_sum(a, b)
+  end
+
+  defp do_sum(a, b) do
+    a + b
+  end
+
+
+case File.read("./input") do
+   {:ok, body} -> Shit.parse(body) |> IO.puts()
+ #  {:ok, body} -> :parsed |>  IO.puts()
+# {:ok, _ } -> Shit.sum(1,3)
+                  
+  {:error, reason} -> IO.puts(:error)
+end
+
+  
+end
+
+
